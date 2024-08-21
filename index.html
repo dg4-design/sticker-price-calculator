@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ステッカー価格計算</title>
+
+    <script src="/calc.js" defer></script>
+  </head>
+  <body>
+    <form onsubmit="calculate(); return false;">
+      <input type="number" id="numStickers" min="1" required />
+      <input type="submit" value="計算" />
+    </form>
+
+    <p>1枚 (¥200) * <span id="remainder"></span> = <span id="singlePrice"></span></p>
+    <p>4枚 (¥400) * <span id="setsOfFour"></span> = <span id="setsPrice"></span></p>
+    <p>合計: <span id="totalPrice"></span></p>
+
+    <p id="suggestion"></p>
+  </body>
+</html>
